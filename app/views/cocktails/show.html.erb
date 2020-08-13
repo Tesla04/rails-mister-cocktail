@@ -1,0 +1,7 @@
+<h1><%= @cocktail.name %></h1>
+<% doses = Dose.all.select { |dose| (dose.cocktail_id == @cocktail.id) } %>
+<ul>
+  <% doses.each do |dose| %>
+    <li><%= Ingredient.find(dose.ingredient_id).name %></li>
+  <% end %>
+</ul>

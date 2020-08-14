@@ -1,0 +1,5 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :ingredient_id, as: :select, collection: Ingredient.all, prompt: 'Select ingredient' %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>

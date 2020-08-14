@@ -3,13 +3,13 @@
     <h1>Cocktails</h1>
   </div>
   <div>
-    <div class="card-container">
+    <div class="card-container d-flex">
       <% @cocktails.each do |cocktail| %>
         <div class="card">
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
       <% end %>
-      <div class="card">
+      <div class="card d-inline-flex">
         <%= link_to '+ Create new cocktail', cocktail_path('new') %>
       </div>
     </div>
